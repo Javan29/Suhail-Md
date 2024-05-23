@@ -26,7 +26,7 @@ global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://gi
 
 global.devs = "923184474176" // Developer Contact
 global.sudo = process.env.SUDO ? process.env.SUDO.replace(/[\s+]/g, '') : "null";
-global.owner= process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.replace(/[\s+]/g, '') : "255625327984";
+global.owner= process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.replace(/[\s+255625327984]/g, '') : "255625327984";
 
 
 
@@ -48,12 +48,12 @@ global.waPresence= process.env.WAPRESENCE ||  "null" ; // 'unavailable' | 'avail
 
 //========================= [ AUTO READ MSGS & CMDS ] =========================\\
 global.readcmds = process.env.READ_COMMAND || "false"
-global.readmessage = process.env.READ_MESSAGE || "false"
+global.readmessage = process.env.READ_MESSAGE || "true"
 global.readmessagefrom = process.env.READ_MESSAGE_FROM || "null,923xxxxxxxx";
 
 
 //========================= [ AUTO SAVE & READ STATUS ] =========================\\
-global.read_status = process.env.AUTO_READ_STATUS || "false"
+global.read_status = process.env.AUTO_READ_STATUS || "true"
 global.save_status = process.env.AUTO_SAVE_STATUS || "false"
 global.save_status_from =  process.env.SAVE_STATUS_FROM  || "null,923xxxxxxxx";
 global.read_status_from =  process.env.READ_STATUS_FROM  ||  "923184474176,923xxxxxxxx";
@@ -84,14 +84,14 @@ module.exports = {
   KOYEB_API : process.env.KOYEB_API  || "false",
 
   REMOVE_BG_KEY : process.env.REMOVE_BG_KEY  || "",
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "sk-proj-YkAMrlbKEHFxrKzBQcHYT3BlbkFJ100pXylj15rDLYZlKqCr",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
   HEROKU_APP_NAME:process.env.HEROKU_APP_NAME|| "",
   antilink_values:process.env.ANTILINK_VALUES|| "all",
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
 
 
-  WORKTYPE: process.env.WORKTYPE || process.env.MODE|| "private",
+  WORKTYPE: process.env.WORKTYPE || process.env.MODE|| "private", 
   LANG: ( process.env.THEME ||  "SUHAIL"  ).toUpperCase(),
 
 
